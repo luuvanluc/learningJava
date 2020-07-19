@@ -2,7 +2,7 @@ package shapes;
 
 public abstract class HinhHoc2D {
 	protected String tenHinh;
-	private ToaDo toaDo;
+	public ToaDo toaDo;
 	public HinhHoc2D(String ten) {
 		// TODO Auto-generated constructor stub
 		tenHinh = ten;
@@ -51,22 +51,22 @@ public abstract class HinhHoc2D {
 		
 	}
 	
-	public static class TOADO{
+	public static class toaDoStatic{
 		int X;
 		int Y;
-		public TOADO(int X, int Y) {
+		public toaDoStatic(int X, int Y) {
 			// TODO Auto-generated constructor stub
 			this.X = X;
 			this.Y = Y;
 		}
 		
-		public TOADO() {
+		public toaDoStatic() {
 			// TODO Auto-generated constructor stub
 			this(0,0);
 		}
 		
 		public void xuatThongTin() {
-			System.out.println("TOA DO la " + X + " va " + Y);
+			System.out.println("Toa do static la " + X + " va " + Y);
 		}
 		
 	}
