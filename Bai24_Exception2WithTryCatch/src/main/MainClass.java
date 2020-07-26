@@ -33,8 +33,12 @@ public class MainClass {
 			B = 10/0;
 			System.out.println(B);
 			
-		} catch (ArrayIndexOutOfBoundsException|ArithmeticException e ) {
-			e.printStackTrace();
+		} catch (ArrayIndexOutOfBoundsException e ) {
+			System.out.println("Phần tử ngoài dải của mảng");
+		} catch (ArithmeticException e) {
+			System.out.println("Có một phép chia cho 0");
+		} finally {
+			System.out.println("Chương trình kết thúc!");
 		}
 		
 		// 3.2 Try-multiCatch with multi-Exception (other way)
@@ -45,11 +49,12 @@ public class MainClass {
 			B = 10/0;
 			System.out.println(B);
 			
-		} catch (ArrayIndexOutOfBoundsException e ) {
-			System.out.println("Phần tử ngoài dải của mảng");
-		} catch (ArithmeticException e) {
-			System.out.println("Có một phép chia cho 0");
+		} catch (ArrayIndexOutOfBoundsException|ArithmeticException e ) {
+			//e.printStackTrace();
+			//System.out.println(e.getMessage());
+			System.out.println(e.toString());
 		}
+		
 	}
 
 }
